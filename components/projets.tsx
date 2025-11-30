@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import { Card, CardContent } from '@/components/ui/card'
 import { motion } from 'framer-motion'
 
@@ -50,8 +51,7 @@ export function Projets() {
                     projets.map((projet, index) => (
                         <Card className='max-w-md justify-self-center shadow-md' key={index}>
                             <CardContent className='space-y-4 text-sm'>
-                                <img
-                                
+                                <Image
                                     src={projet.imageUrl}
                                     alt='Banner'
                                     className='aspect-video w-full rounded-md object-cover'

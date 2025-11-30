@@ -5,16 +5,16 @@ import {
     TypingAnimation,
 } from "@/components/ui/terminal"
 import { Button } from "./ui/button";
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 
 export function Contact() {
 
     const [result, setResult] = useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("....");
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
     formData.append("access_key", "02e798ab-8530-4fb5-982b-d1b2ac73d98e");
 
     const response = await fetch("https://api.web3forms.com/submit", {
@@ -25,7 +25,7 @@ export function Contact() {
     const data = await response.json();
     if (data.success) {
       setResult("Message envoyé avec succès!");
-      event.target.reset();
+      event.currentTarget.reset();
     } else {
       setResult("Error");
     }

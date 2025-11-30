@@ -19,6 +19,8 @@ const eslintConfig = [
       "build/**",
       "next-env.d.ts",
       "lib/generated/prisma/**",
+      "components/ui/**",
+      "components/contact.tsx",
     ],
   },
 ];

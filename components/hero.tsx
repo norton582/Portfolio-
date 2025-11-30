@@ -68,7 +68,7 @@ export function Hero(){
                     >
                         {
                             icons.map((icon, index) => (
-                                <img src={icon.name} key={index} width={40} height={40} alt="Technologie" className="md:w-[50px] md:h-[50px]"/>
+                                <Image src={icon.name} key={index} width={40} height={40} alt="Technologie" className="md:w-[50px] md:h-[50px]"/>
                             ))
                         }
                     </motion.div>
